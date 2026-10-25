@@ -30,7 +30,7 @@ def extract_text_from_docx(file_bytes: bytes) -> str:
     return result.stdout
 
 
-def extract_raw_text(filename: str, file_bytes: bytes) -> str:
+def extract_raw_text(filename: str, file) -> str:
     """Dispatch to the correct parser based on file extension."""
     ext = Path(filename).suffix.lower()
     if ext == ".pdf":
